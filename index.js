@@ -75,7 +75,8 @@ async function handleSpeak(req, res) {
     console.log('Wrote audio file:', OUTPUT_FILE);
 
     // Use plughw:0,0 (this is what you confirmed works)
-    exec(`aplay -D plughw:0,0 ${OUTPUT_FILE}`, (error, stdout, stderr) => {
+	//aplay -D plughw:0,0 
+    exec(`aplay ${OUTPUT_FILE}`, (error, stdout, stderr) => {
       if (error) {
         console.error('aplay error:', error, stderr);
       } else {
