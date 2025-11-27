@@ -49,7 +49,7 @@ async function handleSpeak(req, res) {
     await util.promisify(fs.writeFile)(OUTPUT_FILE, response.audioContent, 'binary');
     console.log('Audio content written to', OUTPUT_FILE);
 
-    exec(`aplay ${OUTPUT_FILE}`, (error, stdout, stderr) => {
+    exec(`aplay -D plughw:0,0 ${OUTPUT_FILE}`, (error, stdout, stderr) => {
       if (error) {
         console.error('aplay error:', error, stderr);
       } else {
