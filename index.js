@@ -11,7 +11,7 @@ app.use(express.json());
 
 // Hard-code your credentials file path on the Pi
 const client = new textToSpeech.TextToSpeechClient({
-  keyFilename: '/home/et101/proj/voiceserver/gcloud-tts.json', // ← adjust if different
+  keyFilename: 'maps-asset-20228803-f4dfa354b964.json', // ← adjust if different
 });
 
 const PORT = 3000;
