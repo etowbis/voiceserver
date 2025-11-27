@@ -5,7 +5,7 @@ echo   "ssml": "<speak><google:style name='lively'>Hey Dude...<break time='3s'/>
 echo } >> tts.json
 
 REM --- Send it to the BeagleBone ---
-curl -X POST -H "Content-Type: application/json" --data @tts.json http://192.168.0.231:3000/speak
+curl -X POST -H "Content-Type: application/json" --data @tts.json http://192.168.0.231:3000/say
 
 REM --- Clean up ---
 del tts.json
