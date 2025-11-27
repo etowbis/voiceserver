@@ -49,6 +49,8 @@ async function handleSpeak(req, res) {
       input,
       voice: {
         languageCode: 'en-US',
+		name: 'en-US-Neural2-C',
+		
         // You can change this to another supported voice if you like
         // name: 'en-US-Neural2-C',
       },
