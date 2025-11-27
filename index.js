@@ -8,7 +8,7 @@ const { exec } = require('child_process');
 const app = express();
 app.use(bodyParser.json());
 
-const client = new textToSpeech.TextToSpeechClient(keyFilename: './maps-asset-20228803-f4dfa354b964.json');
+const client = new textToSpeech.TextToSpeechClient({keyFilename: './maps-asset-20228803-f4dfa354b964.json'});
 
 app.post('/say', async (req, res) => {
   try {
